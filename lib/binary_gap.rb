@@ -1,10 +1,11 @@
 module Number
   def self.binary_gap(n)
-    gaps to_bin(n)
+    max_gap = gaps(n).max_by(&:length)
+    if max_gap then max_gap.length else 0 end
   end
 
-  def self.gaps(bin)
-    bin.scan(/0+/)
+  def self.gaps(n)
+    to_bin(n).scan(/0+/)
   end
 
   def self.to_bin(n)
