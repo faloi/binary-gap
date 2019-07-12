@@ -5,7 +5,7 @@ module Number
   end
 
   def self.gaps(n)
-    to_bin(n).scan(/0+/)
+    to_bin(n).scan(/(0+)1+/).flatten
   end
 
   def self.to_bin(n)
