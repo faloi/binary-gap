@@ -1,7 +1,10 @@
 require 'rspec'
+require_relative '../lib/binary_gap'
+
 
 describe 'binary_gap' do
   context 'pirulo' do
-    it { expect(3).to eq(3) }
+    let(:result) { Number.binary_gap(8) }
+    it { expect(result).to eq(8) }
   end
 end
