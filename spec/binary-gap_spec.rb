@@ -48,5 +48,10 @@ describe 'binary_gap' do
       let(:number) { 15 }
       it { expect(result).to eq(0) }
     end
+
+    context 'another example' do
+      let(:number) { 1041 }
+      it { expect(result).to eq(5) }
+    end
   end
 end
